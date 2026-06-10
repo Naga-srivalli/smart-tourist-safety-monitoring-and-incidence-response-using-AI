@@ -28,7 +28,7 @@ warnings.filterwarnings('ignore')
 #  PAGE CONFIG
 # ─────────────────────────────────────────────
 st.set_page_config(
-    page_title="Smart Tourist Safety Monitoring and Incidence Response System using AI",
+    page_title="TravelEye - Smart Tourist Safety Monitoring and Incidence Response System using AI",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -47,7 +47,7 @@ st.markdown("""
     
     /* Premium background override for app view */
     [data-testid="stAppViewContainer"] {
-        background: radial-gradient(circle at 50% 50%, #0d0a22 0%, #060411 100%) !important;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
     }
     [data-testid="stHeader"] {
         background: transparent !important;
@@ -55,45 +55,45 @@ st.markdown("""
     
     /* Premium background override for sidebar */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0b091c 0%, #05030f 100%) !important;
-        border-right: 1px solid rgba(155, 81, 224, 0.2) !important;
+        background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%) !important;
+        border-right: 1px solid rgba(148, 163, 184, 0.2) !important;
     }
     
     /* Styled widgets & selects */
     div[data-baseweb="select"] {
-        background-color: rgba(25, 22, 47, 0.6) !important;
+        background-color: rgba(255, 255, 255, 0.9) !important;
         border-radius: 10px !important;
-        border: 1px solid rgba(155, 81, 224, 0.15) !important;
+        border: 1px solid rgba(99, 102, 241, 0.2) !important;
     }
     
     /* Premium glowing buttons */
     .stButton>button {
-        background: linear-gradient(90deg, #7f00ff, #e100ff) !important;
+        background: linear-gradient(90deg, #6366f1, #a855f7) !important;
         color: white !important;
         border: none !important;
         border-radius: 10px !important;
         padding: 10px 24px !important;
         font-weight: 600 !important;
         transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-        box-shadow: 0 4px 15px rgba(127, 0, 255, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
     }
     .stButton>button:hover {
         transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(225, 0, 255, 0.5) !important;
+        box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4) !important;
     }
     
     .main-header {
-        background: linear-gradient(135deg, rgba(30, 20, 60, 0.85) 0%, rgba(12, 8, 26, 0.95) 100%);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(241, 245, 249, 0.95) 100%);
         padding: 40px 25px;
         border-radius: 20px;
         text-align: center;
         margin-bottom: 35px;
-        border: 1px solid rgba(155, 81, 224, 0.25);
-        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(99, 102, 241, 0.15);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(15px);
     }
     .main-header h1 {
-        background: linear-gradient(90deg, #00f2fe, #4facfe, #bf55ec, #ff3366);
+        background: linear-gradient(90deg, #1e3a8a, #3b82f6, #6366f1, #ec4899);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 2.3rem;
@@ -103,60 +103,60 @@ st.markdown("""
         line-height: 1.3;
     }
     .metric-card {
-        background: rgba(25, 22, 47, 0.5);
-        border: 1px solid rgba(155, 81, 224, 0.15);
+        background: rgba(25, 22, 47, 0.05);
+        border: 1px solid rgba(148, 163, 184, 0.2);
         border-radius: 16px;
         padding: 24px;
         text-align: center;
         backdrop-filter: blur(12px);
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     }
     .metric-card:hover {
         transform: translateY(-8px) scale(1.02);
-        border-color: rgba(0, 242, 254, 0.4);
-        box-shadow: 0 12px 40px rgba(0, 242, 254, 0.15);
+        border-color: rgba(99, 102, 241, 0.4);
+        box-shadow: 0 12px 30px rgba(99, 102, 241, 0.1);
     }
     .alert-green {
-        background: linear-gradient(135deg, rgba(13, 60, 38, 0.6), rgba(20, 90, 50, 0.6));
-        border: 1px solid rgba(0, 255, 136, 0.3);
-        border-left: 6px solid #00ff88;
+        background: linear-gradient(135deg, rgba(209, 250, 229, 0.85), rgba(240, 253, 250, 0.85));
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-left: 6px solid #10b981;
         padding: 18px;
         border-radius: 12px;
-        color: #00ff88;
+        color: #065f46;
         font-weight: 500;
         display: flex;
         align-items: center;
         gap: 12px;
-        box-shadow: 0 8px 32px rgba(0, 255, 136, 0.05);
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.05);
         backdrop-filter: blur(10px);
     }
     .alert-yellow {
-        background: linear-gradient(135deg, rgba(63, 53, 0, 0.6), rgba(92, 77, 0, 0.6));
-        border: 1px solid rgba(255, 215, 0, 0.3);
-        border-left: 6px solid #ffd700;
+        background: linear-gradient(135deg, rgba(254, 243, 199, 0.85), rgba(255, 251, 235, 0.85));
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        border-left: 6px solid #f59e0b;
         padding: 18px;
         border-radius: 12px;
-        color: #ffd700;
+        color: #92400e;
         font-weight: 500;
         display: flex;
         align-items: center;
         gap: 12px;
-        box-shadow: 0 8px 32px rgba(255, 215, 0, 0.05);
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.05);
         backdrop-filter: blur(10px);
     }
     .alert-red {
-        background: linear-gradient(135deg, rgba(74, 13, 13, 0.6), rgba(110, 20, 20, 0.6));
-        border: 1px solid rgba(255, 68, 68, 0.3);
-        border-left: 6px solid #ff4444;
+        background: linear-gradient(135deg, rgba(254, 226, 226, 0.85), rgba(255, 241, 241, 0.85));
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        border-left: 6px solid #ef4444;
         padding: 18px;
         border-radius: 12px;
-        color: #ff4444;
+        color: #991b1b;
         font-weight: 500;
         display: flex;
         align-items: center;
         gap: 12px;
-        box-shadow: 0 8px 32px rgba(255, 68, 68, 0.05);
+        box-shadow: 0 4px 15px rgba(239, 68, 68, 0.05);
         backdrop-filter: blur(10px);
     }
 </style>
@@ -375,7 +375,7 @@ def main():
     # Header
     st.markdown("""
     <div class="main-header">
-        <h1>🛡️ Smart Tourist Safety Monitoring and Incidence Response System using AI</h1>
+        <h1>🛡️ TravelEye — Smart Tourist Safety Monitoring and Incidence Response System</h1>
     </div>
     """, unsafe_allow_html=True)
 
@@ -388,10 +388,10 @@ def main():
     # Sidebar Custom Logo & Branding
     st.sidebar.markdown("""
     <div style="text-align: center; padding: 25px 0 10px 0;">
-        <span style="font-size: 50px; text-shadow: 0 0 20px rgba(155, 81, 224, 0.6);">🛡️</span>
-        <h2 style="color: #00f2fe; margin-top: 10px; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.5px;">SENTINEL OS</h2>
-        <p style="color: #8a99ad; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">AI Tourist Safety Engine</p>
-        <div style="height: 1px; background: linear-gradient(90deg, transparent, rgba(155, 81, 224, 0.4), transparent); margin-top: 15px; width: 100%;"></div>
+        <span style="font-size: 50px; text-shadow: 0 0 20px rgba(99, 102, 241, 0.2);">🛡️</span>
+        <h2 style="color: #4f46e5; margin-top: 10px; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.5px;">TravelEye</h2>
+        <p style="color: #475569; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">AI Tourist Safety Engine</p>
+        <div style="height: 1px; background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent); margin-top: 15px; width: 100%;"></div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -424,27 +424,27 @@ def main():
             st.markdown("""
             <div class="metric-card">
                 <span style="font-size: 28px;">🟢</span>
-                <h3 style="margin: 5px 0; color: #a8b2d8; font-size: 1rem; font-weight: 400;">Safe Tourists</h3>
-                <h2 style="margin: 0; color: #00ff88; font-size: 2.2rem; font-weight: 600;">247</h2>
-                <span style="color: #00ff88; font-size: 0.85rem; font-weight: 600;">▲ +12 today</span>
+                <h3 style="margin: 5px 0; color: #475569; font-size: 1rem; font-weight: 400;">Safe Tourists</h3>
+                <h2 style="margin: 0; color: #10b981; font-size: 2.2rem; font-weight: 600;">247</h2>
+                <span style="color: #10b981; font-size: 0.85rem; font-weight: 600;">▲ +12 today</span>
             </div>
             """, unsafe_allow_html=True)
         with col2:
             st.markdown("""
             <div class="metric-card">
                 <span style="font-size: 28px;">🟡</span>
-                <h3 style="margin: 5px 0; color: #a8b2d8; font-size: 1rem; font-weight: 400;">Warning Zone</h3>
-                <h2 style="margin: 0; color: #ffd700; font-size: 2.2rem; font-weight: 600;">18</h2>
-                <span style="color: #ffd700; font-size: 0.85rem; font-weight: 600;">▼ -3 today</span>
+                <h3 style="margin: 5px 0; color: #475569; font-size: 1rem; font-weight: 400;">Warning Zone</h3>
+                <h2 style="margin: 0; color: #d97706; font-size: 2.2rem; font-weight: 600;">18</h2>
+                <span style="color: #d97706; font-size: 0.85rem; font-weight: 600;">▼ -3 today</span>
             </div>
             """, unsafe_allow_html=True)
         with col3:
             st.markdown("""
             <div class="metric-card">
                 <span style="font-size: 28px;">🔴</span>
-                <h3 style="margin: 5px 0; color: #a8b2d8; font-size: 1rem; font-weight: 400;">Active Incidents</h3>
-                <h2 style="margin: 0; color: #ff4444; font-size: 2.2rem; font-weight: 600;">3</h2>
-                <span style="color: #ff4444; font-size: 0.85rem; font-weight: 600;">▲ +1 active</span>
+                <h3 style="margin: 5px 0; color: #475569; font-size: 1rem; font-weight: 400;">Active Incidents</h3>
+                <h2 style="margin: 0; color: #ef4444; font-size: 2.2rem; font-weight: 600;">3</h2>
+                <span style="color: #ef4444; font-size: 0.85rem; font-weight: 600;">▲ +1 active</span>
             </div>
             """, unsafe_allow_html=True)
 
@@ -476,7 +476,7 @@ def main():
                          color="Signal %",
                          color_continuous_scale=["red", "yellow", "green"],
                          title="Signal Strength by Zone")
-            fig.update_layout(height=300, showlegend=False)
+            fig.update_layout(height=300, showlegend=False, template="plotly_white")
             st.plotly_chart(fig, use_container_width=True)
 
         # Offline mode indicator
@@ -501,16 +501,16 @@ def main():
             st.markdown(f"""
             <div class="metric-card">
                 <span style="font-size: 24px;">🌳</span>
-                <h3 style="margin: 5px 0; color: #a8b2d8; font-size: 0.95rem;">Random Forest Accuracy</h3>
-                <h2 style="margin: 0; color: #00ff88; font-size: 1.8rem; font-weight: 600;">{rf_acc*100:.1f}%</h2>
+                <h3 style="margin: 5px 0; color: #475569; font-size: 0.95rem;">Random Forest Accuracy</h3>
+                <h2 style="margin: 0; color: #10b981; font-size: 1.8rem; font-weight: 600;">{rf_acc*100:.1f}%</h2>
             </div>
             """, unsafe_allow_html=True)
         with col2:
             st.markdown(f"""
             <div class="metric-card">
                 <span style="font-size: 24px;">🚀</span>
-                <h3 style="margin: 5px 0; color: #a8b2d8; font-size: 0.95rem;">Gradient Boosting Accuracy</h3>
-                <h2 style="margin: 0; color: #00ff88; font-size: 1.8rem; font-weight: 600;">{gb_acc*100:.1f}%</h2>
+                <h3 style="margin: 5px 0; color: #475569; font-size: 0.95rem;">Gradient Boosting Accuracy</h3>
+                <h2 style="margin: 0; color: #10b981; font-size: 1.8rem; font-weight: 600;">{gb_acc*100:.1f}%</h2>
             </div>
             """, unsafe_allow_html=True)
 
@@ -596,7 +596,7 @@ def main():
                          title="SHAP Feature Importance — Why this prediction?",
                          color="Impact",
                          color_continuous_scale="RdYlGn_r")
-            fig.update_layout(height=400)
+            fig.update_layout(height=400, template="plotly_white")
             st.plotly_chart(fig, use_container_width=True)
 
             # Log to local SQLite database if danger
@@ -741,24 +741,24 @@ def main():
             st.markdown("""
             <div class="metric-card">
                 <span style="font-size: 24px;">🔒</span>
-                <h3 style="margin: 5px 0; color: #a8b2d8; font-size: 0.95rem;">Data Encrypted</h3>
-                <h2 style="margin: 0; color: #00ff88; font-size: 1.8rem; font-weight: 600;">100%</h2>
+                <h3 style="margin: 5px 0; color: #475569; font-size: 0.95rem;">Data Encrypted</h3>
+                <h2 style="margin: 0; color: #10b981; font-size: 1.8rem; font-weight: 600;">100%</h2>
             </div>
             """, unsafe_allow_html=True)
         with col2:
             st.markdown("""
             <div class="metric-card">
                 <span style="font-size: 24px;">📍</span>
-                <h3 style="margin: 5px 0; color: #a8b2d8; font-size: 0.95rem;">Location Shared</h3>
-                <h2 style="margin: 0; color: #ffd700; font-size: 1.8rem; font-weight: 600;">Emergency Only</h2>
+                <h3 style="margin: 5px 0; color: #475569; font-size: 0.95rem;">Location Shared</h3>
+                <h2 style="margin: 0; color: #d97706; font-size: 1.8rem; font-weight: 600;">Emergency Only</h2>
             </div>
             """, unsafe_allow_html=True)
         with col3:
             st.markdown("""
             <div class="metric-card">
                 <span style="font-size: 24px;">👁️</span>
-                <h3 style="margin: 5px 0; color: #a8b2d8; font-size: 0.95rem;">Personal Data Visible</h3>
-                <h2 style="margin: 0; color: #ff4444; font-size: 1.8rem; font-weight: 600;">Never (Hashed)</h2>
+                <h3 style="margin: 5px 0; color: #475569; font-size: 0.95rem;">Personal Data Visible</h3>
+                <h2 style="margin: 0; color: #ef4444; font-size: 1.8rem; font-weight: 600;">Never (Hashed)</h2>
             </div>
             """, unsafe_allow_html=True)
 
@@ -775,9 +775,10 @@ def main():
                          names=risk_counts.index,
                          title="Risk Level Distribution",
                          color_discrete_map={
-                             "Safe": "green",
-                             "Warning": "orange",
-                             "Danger": "red"})
+                             "Safe": "#10b981",
+                             "Warning": "#f59e0b",
+                             "Danger": "#ef4444"},
+                         template="plotly_white")
             st.plotly_chart(fig, use_container_width=True)
 
         with col2:
@@ -786,9 +787,10 @@ def main():
                              color="risk_level",
                              title="Distance vs Signal Strength",
                              color_discrete_map={
-                                 "Safe": "green",
-                                 "Warning": "orange",
-                                 "Danger": "red"})
+                                 "Safe": "#10b981",
+                                 "Warning": "#f59e0b",
+                                 "Danger": "#ef4444"},
+                             template="plotly_white")
             st.plotly_chart(fig, use_container_width=True)
 
         # Feature correlations
@@ -798,7 +800,8 @@ def main():
                        "terrain_difficulty", "temperature", "altitude"]
         corr = df[numeric_cols].corr()
         fig = px.imshow(corr, title="Feature Correlation Heatmap",
-                        color_continuous_scale="RdBu_r")
+                        color_continuous_scale="RdBu_r",
+                        template="plotly_white")
         st.plotly_chart(fig, use_container_width=True)
 
 

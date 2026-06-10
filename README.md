@@ -1,4 +1,4 @@
-# 🛡️ Smart Tourist Safety Monitoring and Incident Response System using AI
+# 🛡️ TravelEye: Smart Tourist Safety Monitoring and Incident Response System using AI
 
 An intelligent, real-time tourist safety monitoring dashboard built with **Streamlit**, powered by **Ensemble Machine Learning**, **Explainable AI (SHAP)**, and **Geo-Fencing** — designed to protect tourists in remote and low-connectivity areas.
 
