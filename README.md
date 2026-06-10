@@ -26,7 +26,7 @@ This system directly addresses all four problems with a unified, offline-capable
 - Real-time risk classification: **Safe** / **Warning** / **Danger**
 - Trained on 10 contextual features (terrain, weather, signal, altitude, etc.)
 
-### 🧠 Explainable AI (XAI) with SHAP
+### 🧠 Explainable AI with SHAP
 - Every AI prediction comes with a **SHAP explanation**
 - Authorities can see *why* a tourist was flagged as at-risk
 - Feature importance visualizations for full transparency
@@ -195,16 +195,8 @@ Visual breakdowns of incidents by type, severity levels, and risk category distr
 
 ---
 
-## 📜 License
-
-This project is for academic and research purposes.
-
----
-
 ## 👥 Authors
 
 - **Naga Srivalli** — [GitHub](https://github.com/Naga-srivalli)
 
 ---
-
-> *Built with ❤️ for safer tourism using the power of AI*
